@@ -7,8 +7,8 @@ with open("config.json") as jsonConfig:
 with open(config.get("inputFile")) as gitTemplateFile:
   gitTemplate = gitTemplateFile.read()
 
-firstLine = config.get("firstLine")
-lastLine = config.get("lastLine")
+firstLine = config.get("firstLine") - 1
+lastLine = config.get("lastLine") - 1
 
 lines = gitTemplate.split('\n')
 
