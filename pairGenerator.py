@@ -1,7 +1,10 @@
 from random import choice
 import json
+import os
 
-with open("config.json") as jsonConfig:
+filePath = os.path.dirname(__file__)
+
+with open(f"{filePath}/config.json") as jsonConfig:
   config = json.load(jsonConfig)
 
 with open(config.get("inputFile")) as gitTemplateFile:
